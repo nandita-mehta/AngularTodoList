@@ -1,0 +1,15 @@
+<h1>Template Driven Form Todo List</h1>
+<form (ngSubmit)="upsertTask(newTask)">
+    <input type="text" name="task" [(ngModel)]="newTask" />
+    <br/><br/>
+    <button type="submit">Submit</button>
+</form>
+<br/><br/>
+<ul *ngFor="let item of list">
+  <li>
+    {{ item }}
+    <button (click)="editTask(item)">Edit</button>
+    <button (click)="deleteTask(item)">Delete</button>
+  </li>
+</ul>
+<hr>

@@ -1,0 +1,12 @@
+<h1>Simple Todo List</h1>
+<input type="text" #task />
+<br/><br/>
+<button (click)="addTask(task.value)">Submit</button>
+<br/><br/>
+<ul *ngFor="let task of list">
+  <li>
+    {{ task }}
+    <button (click)="deleteTask(task)">Delete</button>
+  </li>
+</ul>
+<hr>

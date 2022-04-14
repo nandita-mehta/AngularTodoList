@@ -1,0 +1,14 @@
+<h1>Reactive Form Todo List</h1>
+<form [formGroup]="formdata" (ngSubmit)="addTask()">
+    <input type="text" name="newTask" id="newTask" formControlName="newTask" />
+    <br/><br/>
+    <button type="submit">Submit</button>
+</form>
+<br/><br/>
+<ul *ngFor="let item of list">
+  <li>
+    {{ newTask }}
+    <button (click)="deleteTask(item)">Delete</button>
+  </li>
+</ul>
+<hr>
